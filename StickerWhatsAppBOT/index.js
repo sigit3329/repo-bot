@@ -36,27 +36,28 @@ client.on('ready', () => {
 
 client.on('message', async (message) => {
     const isGroups = message.from.endsWith('@g.us') ? true : false;
-    if ((isGroups && config.groups) || !isGroups) {
-        if (message.type == "image" || message.type == "video" || message.type  == "gif") {
-            client.sendMessage(message.from, "*[⏳]* Loading..");
-            try {
-                const media = await message.downloadMedia();
-                client.sendMessage(message.from, media, {
-                    sendMediaAsSticker: true,
-                    stickerName: config.name, // Sticker Name = Edit in 'config/config.json'
-                    stickerAuthor: config.author // Sticker Author = Edit in 'config/config.json'
-                }).then(() => {
-                    client.sendMessage(message.from, "*[✅]* Successfully!");
-                });
-            } catch {
-                client.sendMessage(message.from, "*[❎]* Failed!");
-            }
-        } else if (message.type == "sticker") {
-            client.sendMessage(message.from, "*[⏳]* Loading..");
+     if ((isGroups && config.groups) || !isGroups) {
+    //     if (message.type == "image" || message.type == "video" || message.type  == "gif") {
+    //         client.sendMessage(message.from, "*[⏳]* Loading..");
+    //         try {
+    //             const media = await message.downloadMedia();
+    //             client.sendMessage(message.from, media, {
+    //                 sendMediaAsSticker: true,
+    //                 stickerName: config.name, // Sticker Name = Edit in 'config/config.json'
+    //                 stickerAuthor: config.author // Sticker Author = Edit in 'config/config.json'
+    //             }).then(() => {
+    //                 client.sendMessage(message.from, "*[✅]* Successfully!");
+    //             });
+    //         } catch {
+    //             client.sendMessage(message.from, "*[❎]* Failed!");
+    //         }
+    //     } 
+         if (message.body == "/sticker") {
+            client.sendMessage(message.from, "sabar ya ngentd!!");
             try {
                 const media = await message.downloadMedia();
                 client.sendMessage(message.from, media).then(() => {
-                    client.sendMessage(message.from, "*[✅]* Successfully!");
+                    client.sendMessage(message.from, "Nyohh sticker");
                 });  
             } catch {
                 client.sendMessage(message.from, "*[❎]* Failed!");

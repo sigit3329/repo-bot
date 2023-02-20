@@ -1,7 +1,7 @@
 {
   "name": "stickerbot",
   "version": "1.4.0",
-  "description": "StickerBOT by DrelezTM",
+  "description": "StickerBOT by sigit.berkarya",
   "main": "index.js",
   "scripts": {
     "install": "npm install",
@@ -11,9 +11,9 @@
     "nodejs",
     "whatsapp-web.js",
     "stickerbot",
-    "dreleztm"
+    "sigit.berkarya"
   ],
-  "author": "DrelezTM",
+  "author": "sigit.berkarya",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
